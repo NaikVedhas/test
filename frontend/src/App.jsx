@@ -7,7 +7,7 @@ function App() {
   const [message,setMessage] = useState("");
 
   const handleClick = () =>{
-    
+
     setMessage("");
   }
   return (
@@ -31,7 +31,7 @@ function App() {
           ))}
         </div>
       ):(
-        <h3> No messageList present at the moment</h3>
+        <h3> No messages present at the moment</h3>
       )}
     </div>
     </>

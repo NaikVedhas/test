@@ -16,6 +16,8 @@ const io = new Server(server, {
     },
 });
 
+//on  is used for catching event and emit for sending one (both in frontend and backend).The names should be same 
+
 
 io.on("connection",(socket)=>{           //when the user connects
 
@@ -25,10 +27,10 @@ io.on("connection",(socket)=>{           //when the user connects
 
     socket.on("sendMessage",(data)=>{
         console.log(data);
-        io.emit("receive_message", data); // Broadcast the message to all connected clients.
+        io.emit("receiveMessage", data); // Broadcast the message to all connected clients.
     });
 
-    socket.io("disconnect",()=>{
+    socket.on("disconnect",()=>{
         console.log("Usser Disconnected");
     })
 });
